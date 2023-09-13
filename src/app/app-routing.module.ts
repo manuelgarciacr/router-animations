@@ -5,16 +5,17 @@ import { LeftPageComponent } from './left-page/left-page.component';
 import { RightPageComponent } from './right-page/right-page.component';
 
 const routes: Routes = [
+    { path: '', redirectTo: '/left', pathMatch: 'full' },
+    {
+        path: 'left',
+        component: LeftPageComponent,
+        data: { animation: 'isLeft' },
+    },
     { path: 'about', component: AboutPageComponent },
     {
         path: 'right',
         component: RightPageComponent,
         data: { animation: 'isRight' },
-    },
-    {
-        path: 'left',
-        component: LeftPageComponent,
-        data: { animation: 'isLeft' },
     },
 ];
 
