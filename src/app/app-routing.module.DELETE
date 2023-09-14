@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutPageComponent } from './about-page/about-page.component';
+import { MiddlePageComponent } from './middle-page/middle-page.component';
 import { LeftPageComponent } from './left-page/left-page.component';
 import { RightPageComponent } from './right-page/right-page.component';
 
@@ -11,7 +11,7 @@ const routes: Routes = [
         component: LeftPageComponent,
         data: { animation: 'isLeft' },
     },
-    { path: 'about', component: AboutPageComponent },
+    { path: 'middle', component: MiddlePageComponent },
     {
         path: 'right',
         component: RightPageComponent,
