@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { ChildrenOutletContexts, RouterModule, RouterOutlet } from '@angular/router';
 //import { MiddlePageComponent } from './middle-page/middle-page.component';
 //import { LeftPageComponent } from './left-page/left-page.component';
 //import { RightPageComponent } from './right-page/right-page.component';
 //import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { fader, fade, scaleFade, slider } from './route-animations';
 //import { E404PageComponent } from './e404-page/e404-page.component';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { AppRoutingModule } from './app-routing.module';
@@ -26,16 +27,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     standalone: true,
+    animations: [slider]
 })
 export class AppComponent {
     title = 'Router animations';
     isMenuCollapsed = true;
 
-    prepareRoute(outlet: RouterOutlet) {
-        return (
-            outlet &&
-            outlet.activatedRouteData &&
-            outlet.activatedRouteData['animation']
-        );
+    constructor(private contexts: ChildrenOutletContexts) {}
+
+    getRouteAnimationData(outlet: RouterOutlet) {
+        // We can have more than one outlet. Getting the primary or named outlet.
+        // return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
+        //     'animation'
+        // ];
+
+        // We can get the outlet by parm
+        return outlet?.activatedRouteData?.['animation']
     }
 }

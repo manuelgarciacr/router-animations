@@ -21,14 +21,14 @@ export const ROUTES: Routes = [
             import('./left-page/left-page.component').then(
                 (c) => c.LeftPageComponent
             ),
-        data: { animation: 'isLeft' }
+        data: { animation: 'isLeft' }, // The data property names (animation) can be arbitrary.
     },
     {
         path: 'middle',
         loadComponent: () =>
             import('./middle-page/middle-page.component').then(
                 (c) => c.MiddlePageComponent
-            )
+            ),
     },
     {
         path: 'right',
@@ -36,7 +36,7 @@ export const ROUTES: Routes = [
             import('./right-page/right-page.component').then(
                 (c) => c.RightPageComponent
             ),
-        data: { animation: 'isRight' }
+        data: { animation: 'isRight' },
     },
     { path: '', redirectTo: '/left', pathMatch: 'full' },
     {
@@ -44,7 +44,7 @@ export const ROUTES: Routes = [
         loadComponent: () =>
             import('./e404-page/e404-page.component').then(
                 (c) => c.E404PageComponent
-            )
+            ),
     },
 ];
 

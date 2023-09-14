@@ -25,6 +25,6 @@
 <!-- <main [@routeAnimations]="prepareRoute(outlet)" class="content">
     <router-outlet #outlet="outlet"></router-outlet>
 </main> -->
-<main class="content">
+<main [@routeAnimation]="getRouteAnimationData(outlet)"> <!-- Set data to the animation trigger @routeAnimation -->
     <router-outlet #outlet="outlet"></router-outlet>
 </main>
