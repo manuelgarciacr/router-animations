@@ -3,9 +3,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { AppComponent } from './app/app.component';
-//import { enableProdMode } from '@angular/core';
+import { enableProdMode } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { ROUTES } from './app/routes';
+import { environment } from './environments/environment';
 //import { provideRouter } from '@angular/router';
 
 /* import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -41,9 +42,9 @@ platformBrowserDynamic().bootstrapModule(AppModule)
     { path: '', redirectTo: '/left', pathMatch: 'full' }
 ]; */
 
-// if (environment.production) {
-//     enableProdMode();
-// }
+if (environment.production) {
+    enableProdMode()
+}
 
 bootstrapApplication(AppComponent, {
     providers: [provideRouter(ROUTES), provideAnimations()],

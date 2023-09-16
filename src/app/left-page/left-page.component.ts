@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
             <a
                 href="https://giphy.com/gifs/reactionseditor-l1KVboXQeiaX7FHgI"
                 target="_blank"
-            >Giphy</a>
+            ></a>
         </p>
     `,
     styles: [],

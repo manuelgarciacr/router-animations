@@ -14,7 +14,10 @@ import { Component, OnInit } from '@angular/core';
             allowFullScreen
         ></iframe>
         <p>
-            <a href="https://giphy.com/gifs/fish-l1IBhVOvoHBF1p4kM" target="_blank">Giphy</a>
+            <a
+                href="https://giphy.com/gifs/fish-l1IBhVOvoHBF1p4kM"
+                target="_blank"
+            ></a>
         </p>
     `,
     styles: [],

@@ -14,7 +14,12 @@ import { Component, OnInit } from '@angular/core';
             class="giphy-embed"
             allowFullScreen
         ></iframe>
-        <p><a href="https://giphy.com/gifs/right-dr-evil-jeXiz1RAvzX44" target="_blank">Giphy</a></p>
+        <p>
+            <a
+                href="https://giphy.com/gifs/right-dr-evil-jeXiz1RAvzX44"
+                target="_blank"
+            ></a>
+        </p>
     `,
     styles: [],
 })
