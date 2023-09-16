@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
         <iframe
             src="https://giphy.com/embed/l1KVboXQeiaX7FHgI"
             width="480"
-            height="360"
+            height="480"
+            heightBack="360"
             frameBorder="0"
             class="giphy-embed"
             allowFullScreen

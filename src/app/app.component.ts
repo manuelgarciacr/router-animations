@@ -5,7 +5,9 @@ import { ChildrenOutletContexts, RouterModule, RouterOutlet } from '@angular/rou
 //import { RightPageComponent } from './right-page/right-page.component';
 //import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { fader, fade, scaleFade, slider } from './route-animations';
+import {
+    /* fader, fade, scaleFade, slider, transformer, stepper, */ stepper2
+} from './route-animations';
 //import { E404PageComponent } from './e404-page/e404-page.component';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +29,7 @@ import { fader, fade, scaleFade, slider } from './route-animations';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     standalone: true,
-    animations: [slider]
+    animations: [stepper2]
 })
 export class AppComponent {
     title = 'Router animations';
